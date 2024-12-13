@@ -14,7 +14,7 @@ const ReusableTable = ({ columns, data }) => {
       </thead>
       <tbody>
         {data.map((row, rowIndex) => (
-          <tr key={rowIndex}>
+          <tr key={rowIndex} tabIndex={0}>
             {columns.map((column) => (
               <td key={column.key}>{row[column.key]}</td>
             ))}

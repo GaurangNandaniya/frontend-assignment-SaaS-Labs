@@ -17,7 +17,6 @@ const App = () => {
       (data) => {
         setShowSpinner(false);
         setProjectsData(data);
-        console.log(data);
       },
       //error callback
       () => {
