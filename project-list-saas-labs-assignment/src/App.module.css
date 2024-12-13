@@ -3,3 +3,44 @@
   flex-direction: column;
   padding: 16px;
 }
+
+.errorText {
+  margin: auto;
+  color: #ff2c2c;
+}
+
+.pageNumberContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.pageItem {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pageItem:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.pageItemActive {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+  font-weight: bold;
+}
+
+.tableContainer {
+  min-height: 214px;
+}
