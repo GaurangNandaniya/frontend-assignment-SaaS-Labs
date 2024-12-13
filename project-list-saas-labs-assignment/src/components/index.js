@@ -1,2 +1,3 @@
 import Spinner from "./Spinner";
-export { Spinner };
+import Table from "./Table";
+export { Spinner, Table };
