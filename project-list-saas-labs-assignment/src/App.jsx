@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import { getData } from "./utils";
-import { Spinner } from "./components";
+import { Spinner, Table } from "./components";
+import classes from "./App.module.css";
+
+const COLUMNS = [
+  { key: "s.no", header: "S.No" },
+  { key: "percentage.funded", header: "Percentage funded" },
+  { key: "amt.pledged", header: "Amount pledged" },
+];
 
 const App = () => {
   const [showSpinner, setShowSpinner] = useState(true);
@@ -22,9 +29,14 @@ const App = () => {
       }
     );
   }, []);
+
   return (
-    <div>
-      {showSpinner && <Spinner />}
+    <div className={classes.container}>
+      {showSpinner ? (
+        <Spinner />
+      ) : (
+        <Table columns={COLUMNS} data={projectsData} />
+      )}
       {showError && <h6>Opps... Something went wrong. Try again</h6>}
     </div>
   );
