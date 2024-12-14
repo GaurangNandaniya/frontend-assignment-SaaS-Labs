@@ -1,3 +1,4 @@
 import Spinner from "./Spinner";
 import Table from "./Table";
-export { Spinner, Table };
+import ConfigDialogue from "./ConfigDialogue";
+export { Spinner, Table, ConfigDialogue };
