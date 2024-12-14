@@ -33,29 +33,34 @@ const ConfigDialogue = (props) => {
   };
   return (
     <>
-      <h3>Available Columns</h3>
-      <ul>
-        {COLUMNS.map((column) => (
-          <li key={column.key}>
-            <label>
-              <input
-                type="checkbox"
-                checked={selectedColumns.includes(column.key)}
-                onChange={() => handleCheckboxChange(column.key)}
-              />
-              {column.header}
-            </label>
-          </li>
-        ))}
-      </ul>
-      <div className={classes.buttonContainer}>
+      <header className={classes.dialogueHeader}>
+        <h3>Available Columns</h3>
+        <p>Select the columns you want to display in table</p>
+      </header>
+      <main className={classes.columnContainer}>
+        <ul>
+          {COLUMNS.map((column) => (
+            <li key={column.key}>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={selectedColumns.includes(column.key)}
+                  onChange={() => handleCheckboxChange(column.key)}
+                />
+                {column.header}
+              </label>
+            </li>
+          ))}
+        </ul>
+      </main>
+      <footer className={classes.buttonContainer}>
         <button className={classes.closeButton} onClick={closeDialogue}>
           Close
         </button>
         <button className={classes.saveButton} onClick={handleSave}>
           Save
         </button>
-      </div>
+      </footer>
     </>
   );
 };
