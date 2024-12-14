@@ -85,6 +85,7 @@ const App = () => {
       const isActive = index + 1 == currentPage;
       pages.push(
         <button
+          title={`Jump to page ${index + 1}`}
           key={index}
           className={`${classes.pageItem} ${
             isActive ? classes.pageItemActive : ""

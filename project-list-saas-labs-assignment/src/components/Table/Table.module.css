@@ -1,9 +1,15 @@
 .container {
   width: 100%;
   border-collapse: collapse;
-  margin: 20px 0;
   font-size: 16px;
   text-align: left;
+  height: max-content;
+  position: relative;
+}
+
+thead tr:first-child {
+  position: sticky;
+  top: 0;
 }
 
 table th,
