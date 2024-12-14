@@ -109,7 +109,11 @@ const App = () => {
         <>
           <div className={classes.tableHeaderContainer}>
             <h1>Highly-rated Kickstarter Projects </h1>{" "}
-            <button className={classes.gearIcon} onClick={openDialogue}>
+            <button
+              className={classes.gearIcon}
+              onClick={openDialogue}
+              title="Configure display columns"
+            >
               ⚙
             </button>
           </div>
